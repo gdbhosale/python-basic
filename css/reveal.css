@@ -1182,4 +1182,8 @@ body {
  .cgreen{color:#11C332 !important;}
  .cblue{color:#42AFFA !important;}
  
+ .left-align{text-align:left;}
+ 
  .reveal ul li{line-height:1.5em;}
+ 
+ .fb_iframe_widget > span, .fb_iframe_widget > span > iframe{height:42px !important;width:350px !important;}

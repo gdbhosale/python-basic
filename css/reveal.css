@@ -1173,3 +1173,13 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * DWIJ CHANGES
+ *********************************************/
+ 
+ .cred{color:#F56767 !important;}
+ .cgreen{color:#11C332 !important;}
+ .cblue{color:#42AFFA !important;}
+ 
+ .reveal ul li{line-height:1.5em;}

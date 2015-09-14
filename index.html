@@ -218,6 +218,153 @@ print y</code></pre>
 				<img src="images/python-snake-2.png" width="300">
 			</section>
 			
+			<section>
+				<h2>Python Identifiers</h2>
+				<ul class="left-align">
+					<li>A Python identifier is a name used to identify a variable, function, class, module or other object.</li>
+					<li>An identifier starts with a letter <a class="cred">A to Z</a> or <a class="cred">a to z</a> or an underscore (<a class="cred">_</a>) followed by zero or more letters, underscores
+					and digits (<a class="cred">0 to 9</a>)</li>
+					<li>Characters not allowed: @, $ and % & other symbols</li>
+					<li>Python is a <a class="cred">case sensitive</a>. Thus, Manpower and manpower are two different identifiers.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Coding Style</h2>
+				<ul class="left-align">
+					<li>No braces <a class="cred">{}</a> for block of code. We use indentation instead.</li>
+					<li>Indentation with similar number of <a class="cred">spaces / tabs</a>.</li>
+				</ul>
+				<pre><code>if True:
+	print "Answer"
+	print "True"
+else:
+	print "Answer"
+	 print "False" # This line will give Error</code></pre>
+			</section>
+			
+			<section>
+				<h2>Python 2 or 3 ?</h2>
+				<ul class="left-align">
+					<li>For beginners there is no real difference.</li>
+					<li>Python 2.x is legacy, Python 3.x is the present and future of the language</li>
+					<li>Python 3.0 was released in 2008. The final 2.x version 2.7 release came out in mid-2010, with a statement of extended support for this end-of-life release.</li>
+					<li>The 2.x branch will see no new major releases after that. 3.x is under active development and has already seen over five years of stable releases, including version 3.3 in 2012 and 3.4 in 2014.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Data</h2>
+			</section>
+			
+			<section>
+				<h2>Objects</h2>
+				<ul class="left-align">
+					<li>Everything in Python is an object that has:</li>
+					<li>an identity (<a class="cred">id</a>)</li>
+					<li>a <a class="cred">type</a></li>
+					<li>a <a class="cred">value</a> (mutable or immutable)</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Object id</h2>
+				<pre><code data-trim>
+>>> a = 4
+>>> id(a)
+140542751073952
+>>> a = "Hello"
+>>> id(a)
+4370401824
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Type</h2>
+				<pre><code data-trim>
+>>> a = 4
+>>> type(a)
+&lt;type 'int'&gt;
+>>> a = "Hello"
+>>> type(a)
+&lt;type 'str'&gt;
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Value</h2>
+				<pre><code data-trim>
+>>> a = 4
+>>> a
+4
+>>> print a
+4
+>>> a = "Hello"
+>>> a
+'Hello'
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Two Types of Objects</h2>
+				<ul class="left-align">
+					<li><a class="cred">Mutable</a>: When you alter the item, the <u>id</u> is still the same.<br><a class="cgreen">e.g.</a> Dictionary, List</li>
+					<li><a class="cred">Immutable</a>: When you alter the item, the <u>id</u> changes.<br><a class="cgreen">e.g.</a> String, Integer, Tuple</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Mutable (Changable)</h2>
+				<ul class="left-align">
+					<li>When you alter the item, the <u>id</u> is still the same.<br><a class="cgreen">e.g.</a> Dictionary, List</li>
+				</ul>
+				<pre><code data-trim>
+>>> b = []
+>>> id(b)
+140675605442000 # Object ID
+>>> b.append(3)
+>>> b
+[3]
+>>> id(b)
+140675605442000 # Object ID SAME !
+				</code></pre>
+				
+			</section>
+			
+			<section>
+				<h2>Immutable</h2>
+				<ul class="left-align">
+					<li>When you alter the item, the <u>id</u> changes.<br><a class="cgreen">e.g.</a> String, Integer, Tuple</li>
+				</ul>
+				<pre><code data-trim>
+>>> a = 4
+>>> id(a)
+6406896
+>>> a = a + 1
+>>> id(a)
+6406872 # DIFFERENT!
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Variables</h2>
+				<pre><code data-trim>
+a = 4 		# Integer
+b = 5.6 	# Float
+c = "hello"	# String
+a = "4" 	# rebound to String
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Two Types of Objects</h2>
+				<ul class="left-align">
+					<li><a class="cred">Mutable</a>: When you alter the item, the <u>id</u> is still the same.<br><a class="cgreen">e.g.</a> Dictionary, List</li>
+					<li><a class="cred">Immutable</a>: When you alter the item, the <u>id</u> changes.<br><a class="cgreen">e.g.</a> String, Integer, Tuple</li>
+				</ul>
+			</section>
+			
+			
 			
 			
 			<section>
@@ -245,7 +392,6 @@ print y</code></pre>
 	<script src="js/reveal.js"></script>
 
 	<script>
-
 		// Full list of configuration options available at:
 		// https://github.com/hakimel/reveal.js#configuration
 		Reveal.initialize({
@@ -266,8 +412,20 @@ print y</code></pre>
 				{ src: 'plugin/notes/notes.js', async: true }
 			]
 		});
-
 	</script>
-
+	
+	<div class="share-reveal">
+		<a target="_blank" class="share-reveal-editor" href="http://dwijitsolutions.com">Powered by Dwij IT Solutions</a>
+		<a target="_blank" class="share-reveal-facebook" href="https://www.facebook.com/DwijItSolutions">
+			<svg viewBox="-8 -8 48 48" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path fill="#FFFFFF" d="M25.613-4.557c0,0-3.707,0-6.166,0c-3.662,0-7.732,1.535-7.732,6.835c0.019,1.845,0,3.613,0,5.603H7.481 v6.728h4.366v19.37h8.021V14.48h5.295l0.479-6.618h-5.913c0,0,0.016-2.946,0-3.8c0-2.093,2.184-1.974,2.312-1.974 c1.042,0,3.059,0.003,3.578,0v-6.646H25.613z"/>
+			</svg>
+		</a>
+		<a target="_blank" class="share-reveal-twitter" href="http://twitter.com/share?url=http%3A%2F%2Flab.hakim.se%2Freveal-js&text=reveal.js%20-%20The%20HTML%20presentation%20framework&via=revealjs&related=revealjs">
+			<svg viewbox="0 0 2000 1625.36" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<path d="m 1999.9999,192.4 c -73.58,32.64 -152.67,54.69 -235.66,64.61 84.7,-50.78 149.77,-131.19 180.41,-227.01 -79.29,47.03 -167.1,81.17 -260.57,99.57 C 1609.3399,49.82 1502.6999,0 1384.6799,0 c -226.6,0 -410.328,183.71 -410.328,410.31 0,32.16 3.628,63.48 10.625,93.51 -341.016,-17.11 -643.368,-180.47 -845.739,-428.72 -35.324,60.6 -55.5583,131.09 -55.5583,206.29 0,142.36 72.4373,267.95 182.5433,341.53 -67.262,-2.13 -130.535,-20.59 -185.8519,-51.32 -0.039,1.71 -0.039,3.42 -0.039,5.16 0,198.803 141.441,364.635 329.145,402.342 -34.426,9.375 -70.676,14.395 -108.098,14.395 -26.441,0 -52.145,-2.578 -77.203,-7.364 52.215,163.008 203.75,281.649 383.304,284.946 -140.429,110.062 -317.351,175.66 -509.5972,175.66 -33.1211,0 -65.7851,-1.949 -97.8828,-5.738 181.586,116.4176 397.27,184.359 628.988,184.359 754.732,0 1167.462,-625.238 1167.462,-1167.47 0,-17.79 -0.41,-35.48 -1.2,-53.08 80.1799,-57.86 149.7399,-130.12 204.7499,-212.41" style="fill:#ffffff"/>
+			</svg>
+		</a>
+	</div>	
 </body>
 </html>

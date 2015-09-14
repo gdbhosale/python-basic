@@ -1185,5 +1185,14 @@ body {
  .left-align{text-align:left;}
  
  .reveal ul li{line-height:1.5em;}
+ .reveal pre code{line-height:1.5em;}
  
  .fb_iframe_widget > span, .fb_iframe_widget > span > iframe{height:42px !important;width:350px !important;}
+ 
+ .share-reveal{position:absolute;bottom:16px;left:50%;margin-left:-139px;z-index:20;}
+.share-reveal a {display: inline-block;height: 34px;line-height: 34px;padding: 0 10px;color: #fff;font-family: Helvetica;text-decoration: none;font-size: 12px;vertical-align: top;box-sizing: border-box;}
+.share-reveal svg {vertical-align:middle;}
+.share-reveal a + a {margin-left:10px;}
+.share-reveal-editor{border:1px solid #fff;}
+.share-reveal-twitter,.share-reveal-follow{background-color:#00aced;}
+.share-reveal-facebook{background-color:#4B71B8;}

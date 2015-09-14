@@ -62,7 +62,7 @@
 				<p>
 					<small>Created by <a target="_blank" href="http://dwijitsolutions.com">Dwij IT Solutions</a> / <a target="_blank" href="http://ganeshbhosale.com">Ganesh Bhosale</a></small><br>
 					<a href="http://dwijitsolutions.com" target="_blank">
-						<img src="http://dwijitsolutions.com/images/logo-med.png" alt="Dwij IT Solutions Logo">
+						<img src="images/dwij-it-solutions.png" alt="Dwij IT Solutions Logo">
 					</a>
 				</p>
 			</section>
@@ -83,7 +83,7 @@
 				<p>Python was conceived in the late 1980’s and its implementation was started in December 1989 by <a target="_blank" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> in the Netherlands.</p>
 				<br>
 				<a target="_blank" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Guido_van_Rossum_OSCON_2006.jpg/200px-Guido_van_Rossum_OSCON_2006.jpg" alt="Guido van Rossum">
+					<img src="images/Guido_van_Rossum.jpg" alt="Guido van Rossum">
 				</a>
 			</section>
 
@@ -357,14 +357,315 @@ a = "4" 	# rebound to String
 			</section>
 			
 			<section>
-				<h2>Two Types of Objects</h2>
+				<h2>Naming Conventions for variables</h2>
 				<ul class="left-align">
-					<li><a class="cred">Mutable</a>: When you alter the item, the <u>id</u> is still the same.<br><a class="cgreen">e.g.</a> Dictionary, List</li>
-					<li><a class="cred">Immutable</a>: When you alter the item, the <u>id</u> changes.<br><a class="cgreen">e.g.</a> String, Integer, Tuple</li>
+					<li>lowercase</li>
+					<li>underscore_between_words</li>
+					<li>don't start with numbers</li>
+					<li>See PEP on <a target="_blank" href="http://legacy.python.org/dev/peps/pep-0008">http://legacy.python.org/dev/peps/pep-0008</a>
+					</li>
 				</ul>
 			</section>
 			
+			<section>
+				<h2>PEP</h2>
+				<ul class="left-align">
+					<li>Python Enhancement Proposal</li>
+					<li>Similar to JSR(Java Specification Requests) in Java </li>
+					<li>The formal documents that describe proposed specifications and technologies for adding to the platform.</li>
+					<li>In short <i class="fa fa-arrow-right"></i> <a class="cgreen">Standardization</a></li>
+				</ul>
+			</section>
 			
+			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
+				<h2>Maths & Variables</h2>
+				<img src="images/maths.png" width="350">
+			</section>
+			
+			<section>
+				<h2>Basic Operations</h2>
+				<ul class="left-align">
+					<li><a class="cred">+</a> (Addition) <a class="cred">-</a> (Substraction) <a class="cred">*</a> (Multiplication) <a class="cred">/</a> (Division)</li>
+					<li><a class="cred">**</a> (power) &nbsp;&nbsp;&nbsp; 2<sup>10</sup> = 1024
+						<pre><code data-trim>
+>>> 2 ** 10
+1024
+						</code></pre>
+					</li>
+					<li><a class="cred">%</a> (modulo) - this operation finds the remainder after division of one number by another.
+						<pre><code data-trim>
+>>> 11 % 2
+1
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Maths</h2>
+				<pre><code data-trim class="python">
+>>> print round(3.14159265, 2) # round number for 2 decimal places
+3.14
+>>> abs(-45) 	# absolute value of number
+45
+>>> 11 // 2 	# floor division
+5
+>>> int(34.67) 	# parse float to int
+34
+>>> int("89")	# parse string to int
+89
+>>> float(89)	# parse int to float
+89.0
+>>> long(67829) # parse to long
+67829L
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Maths Module</h2>
+				<pre><code data-trim class="python">
+>>> import math 	# Import Math Module
+>>> math.sqrt(10) 	# Find Square root of 10
+3.1622776601683795
+>>> math.factorial(5) 	# Factorial of 5
+120
+>>> math.log10(20) 	# Return the base-10 logarithm of 20
+1.3010299956639813
+>>> math.sin(4) 	# Return the sine of 4 radians
+-0.7568024953079282
+>>> math.pi 		# The mathematical constant π
+3.141592653589793
+
+
+				</code></pre>
+				<ul class="left-align">
+					<li>Check more on <a target="_blank" href="https://docs.python.org/2/library/math.html" >https://docs.python.org</a>.</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Order of Operations</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Order</th>
+							<th>Syntax</th>
+							<th>Operation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>( ... )</td>
+							<td>Parentheses</td>
+						<tr>
+						<tr>
+							<td>2</td>
+							<td>**</td>
+							<td>Exponents</td>
+						<tr>
+						<tr>
+							<td>3</td>
+							<td>* / % //</td>
+							<td>Multiplication and Division</td>
+						<tr>
+						<tr>
+							<td>4</td>
+							<td>+ -</td>
+							<td>Addition and Subtraction</td>
+						<tr>
+					</tbody>
+				</table>
+			</section>
+			
+			<section>
+				<h2>Careful with integer division</h2>
+				<pre><code data-trim class="python">
+>>> 3/4
+0
+>>> 3/4. 	# Either number should be float
+0.75
+>>> 3./4
+0.75
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Long</h2>
+				<pre><code data-trim class="python">
+>>> import sys
+>>> sys.maxint 		# Value differs from PC to PC
+9223372036854775807
+>>> sys.maxint + 1
+9223372036854775808L 	# Long variable
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>New way of defining variables</h2>
+				<pre><code data-trim class="python">a, b = 0, 1</code></pre>
+				<p>is same as</p>
+				<pre><code data-trim class="python">
+a = 0
+b = 1
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Booleans</h2>
+				<ul class="left-align">
+					<li>Values: <a class="cred">True</a> / <a class="cgreen">False</a>.</li>
+					<li>First letters should be capital.</li>
+				</ul>
+				<pre><code data-trim class="python">
+a = True
+b = False
+
+if False:
+	print "Its true"	# This will not get printed
+if a:
+	print a 		# Prints True
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>None</h2>
+				<ul class="left-align">
+					<li>Pythonic way of saying <a class="cred">NULL</a>.</li>
+					<li>Evaluates to boolean <a class="cred">False</a>.</li>
+				</ul>
+				<pre><code data-trim class="python">
+c = None
+				</code></pre>
+			</section>
+			
+			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
+				<h2>String Manipulation</h2>
+				<img src="images/string-python.png" width="400">
+			</section>
+			
+			<section>
+				<h2>String Definations</h2>
+				<ul class="left-align">
+					<li>Either by double ( <a class="cred">"</a> ) or single ( <a class="cred">'</a> ) quotes.</li>
+					<li>You can insert single quote ( <a class="cred">'</a> ) within string created by double quotes ( <a class="cred">"</a> ) & vice versa.</li>
+					<li>Multiline string need three time single ( <a class="cred">'''</a> ) or double quotes ( <a class="cred">"""</a> ).</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> name = 'matt'
+>>> with_double_quote = "I ain't gonna"
+>>> longer = """This string has
+... multiple lines
+... in it"""
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>How to print complex Strings</h2>
+				<p>Using String Escaping</p>
+				<pre><code data-trim class="python">
+>>> print 'He said, "I\'m sorry"'
+He said, "I'm sorry"
+>>> print '''He said, "I'm sorry"'''
+He said, "I'm sorry"
+>>> print """He said, "I'm sorry\""""
+He said, "I'm sorry"
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>String Escaping</h2>
+				<table class="shrink">
+					<thead>
+						<tr>
+							<th>Escape Sequence</th>
+							<th>Output</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>\\</td>
+							<td>Backslash</td>
+						<tr>
+						<tr>
+							<td>\'</td>
+							<td>Single Quote</td>
+						<tr>
+						<tr>
+							<td>\"</td>
+							<td>Double quote</td>
+						<tr>
+						<tr>
+							<td>\b</td>
+							<td>ASCII Backspace</td>
+						<tr>
+						<tr>
+							<td>\n</td>
+							<td>Newline</td>
+						<tr>
+						<tr>
+							<td>\t</td>
+							<td>Tab</td>
+						<tr>
+						<tr>
+							<td>\u<a class="cblue">12af</a></td>
+							<td>Unicode 16 bit</td>
+						<tr>
+						<tr>
+							<td>\U<a class="cblue">12af89bc</a></td>
+							<td>Unicode 32 bit</td>
+						<tr>
+						<tr>
+							<td>\o<a class="cblue">84</a></td>
+							<td>Octal character</td>
+						<tr>
+						<tr>
+							<td>\x<a class="cblue">FF</a></td>
+							<td>Hex character</td>
+						<tr>
+					</tbody>
+				</table>
+			</section>
+			
+			<section>
+				<h2>String formatting</h2>
+				<p>c-like</p>
+				<pre><code data-trim class="python">
+>>> "%s %s" %('hello', 'world')
+'hello world'
+				</code></pre>
+				<p>PEP 3101 style</p>
+				<pre><code data-trim class="python">
+>>> "{0} {1}".format('hello', 'world')
+'hello world'
+>>> print "Hello" , " " , "World"
+Hello   World
+				</code></pre>
+
+			</section>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<section>
+				<h2>Global Variable</h2>
+				<ul class="left-align">
+					<li>Need to define <a class="cred">global</a> in order to use inside functions.</li>
+				</ul>
+				<pre><code data-trim class="python">
+# declare global variable
+n = 0
+def setup():
+    global n
+    n = 100
+				</code></pre>
+			</section>
 			
 			
 			<section>

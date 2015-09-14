@@ -20,6 +20,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+	<!-- help : http://lab.hakim.se/reveal-js -->
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css" id="theme">
 	
@@ -227,6 +228,20 @@ print y</code></pre>
 					<li>Characters not allowed: @, $ and % & other symbols</li>
 					<li>Python is a <a class="cred">case sensitive</a>. Thus, Manpower and manpower are two different identifiers.</li>
 				</ul>
+			</section>
+			
+			<section>
+				<h2>Comments</h2>
+				<ul class="left-align">
+					<li>Comments follow a <a class="cred">#</a> Hash</li>
+					<li>No multi-line comments</li>
+				</ul>
+				<pre><code data-trim class="python">
+a = 20 # Single line comment
+
+# This is multiline comment using hash
+# and it goes to another line as well
+				</code></pre>
 			</section>
 			
 			<section>
@@ -641,9 +656,86 @@ He said, "I'm sorry"
 >>> print "Hello" , " " , "World"
 Hello   World
 				</code></pre>
-
 			</section>
 			
+			<section>
+				<h2>String manipulation</h2>
+				<p>Strings can be concatenated (glued together) with the <a class="cred">+</a> operator, and repeated with <a class="cred">*</a></p>
+				<pre><code data-trim class="python">
+>>> 3 * 'un' + 'ium' 	# 3 times 'un', followed by 'ium'
+'unununium'
+>>> 'Py' 'thon'
+'Python'
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>String as a List / Array</h2>
+				<pre><code data-trim class="python">
+>>> text = ('Put several strings within ' 'to have them.')
+>>> text
+'Put several strings within to have them.'
+>>> text[0] # character in position 0
+'P'
+>>> text[-1] # last character
+'.'
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Conversion to String</h2>
+				<p>To convert any Object to String</p>
+				<pre><code data-trim class="python">
+>>> s = str(12345)
+>>> s
+'12345'
+>>> s = str(45.89)
+>>> s
+'45.89'
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>String Methods</h2>
+				<table class="shrink">
+					<thead>
+						<tr>
+							<th>Method</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>s.endswith(sub)</th>
+							<th>Returns True if ends with sub</th>
+						</tr>
+						<tr>
+							<th>s.find(sub)</th>
+							<th>Returns index of sub or -1 (If not found)</th>
+						<tr>
+						<tr>
+							<td>s.format(*args)</td>
+							<td>Places arguments in string. Arguments repalce numbers enclosed with curly brackets.</td>
+						<tr>
+						<tr>
+							<td>s.index(sub)</td>
+							<td>Returns index of sub or exception</td>
+						<tr>
+						<tr>
+							<td>s.join(list)</td>
+							<td>Returns list items separated by string</td>
+						<tr>
+						<tr>
+							<td>s.strip()</td>
+							<td>Removes/Trims whitespace from start/end</td>
+						<tr>
+						<tr>
+							<td>s.strip("*")</td>
+							<td>Removes/Trims astrericks from start/end</td>
+						<tr>
+					</tbody>
+				</table>
+			</section>
 			
 			
 			

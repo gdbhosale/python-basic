@@ -1181,6 +1181,7 @@ body {
  .cred{color:#F56767 !important;}
  .cgreen{color:#11C332 !important;}
  .cblue{color:#42AFFA !important;}
+ .cwhite{color:#FFF !important;}
  
  .left-align{text-align:left;}
  
@@ -1190,6 +1191,7 @@ body {
  .reveal table.shrink{font-size:0.6em;}
  .reveal table.noborder td{border:0px;padding-top:10px;}
  .reveal table td.code{font-family:monospace;color:#efef8f;border-color:#FFF;line-height:28px;font-weight:200;}
+ .reveal table.centeredtd td{text-align:center;}
  
  .fb_iframe_widget > span, .fb_iframe_widget > span > iframe{height:42px !important;width:350px !important;}
  

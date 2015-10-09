@@ -1091,6 +1091,92 @@ startswith(...)
 			</section>
 			
 			<section>
+				<h2>range method</h2>
+				<ul class="left-align">
+					<li>To create number list immediately</li>
+					<li>(start, end) parameters</li>
+					<li>length = end – start</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> range(0, 10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> range(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> a = [1, 5]
+>>> range(*a) 	# Unpacking Argument List
+[1, 2, 3, 4]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Array Negative Indexing </h2>
+				<ul class="left-align">
+					<li>reinterpret <span class="cred">a[ -x ]</span> as <span class="cgreen">a[ len( a ) - x ]</span></li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> colors = ["red", "blue", "purple", "maroon"]
+>>> colors[0]
+'red'
+>>> colors[-1] 	# Negative Indexing
+'maroon'
+>>> colors[-4]
+'red'
+>>> colors[-5] 	# Won't work beyond this
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Array Slicing</h2>
+				<ul class="left-align">
+					<li>arr[ start : end ]</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> colors = ["red", "blue", "purple", "maroon"]
+>>> colors[0:1]
+['red']
+>>> colors[0:3]
+['red', 'blue', 'purple']
+>>> colors[:2]
+['red', 'blue']
+>>> colors[2:]
+['purple', 'maroon']
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Array Stride</h2>
+				<ul class="left-align">
+					<li>arr[ start : end : step ]</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> range(0,10)[0:5:2]
+[0, 2, 4]
+>>> range(0,10)[2:5:2]
+[2, 4]
+>>> range(0,10)[:5:2]
+[0, 2, 4]
+>>> range(0,10)[::3]
+[0, 3, 6, 9]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Array Slicing 2</h2>
+				<pre><code data-trim class="python">
+>>> a = "Tiger"
+>>> a[:-1]
+'Tige'
+>>> a[::2]
+'Tgr'
+>>> a[::-1]
+'regiT'
+				</code></pre>
+			</section>
+			
+			<section>
 				<h2>in keyword</h2>
 				<ul class="left-align">
 					<li>Checks if value present in sequence</li>
@@ -1322,7 +1408,49 @@ set(['b', 'd', 'm', 'l', 'r', 'z'])
 				</table>
 			</section>
 			
-			
+			<section>
+				<h2>Comparing Sequences</h2>
+				<table class="shrink noborder centeredtd">
+					<tbody>
+						<tr>
+							<td class="code">(1, 2, 3)</td>
+							<td> < </td>
+							<td class="code">(1, 2, 4)</td>
+						</tr>
+						<tr>
+							<td class="code">[1, 2, 3]</td>
+							<td> < </td>
+							<td class="code">[1, 2, 4]</td>
+						</tr>
+						<tr>
+							<td class="code" colspan="3">
+								'ABC' <span class="cwhite"><</span> 'C' <span class="cwhite"><</span> 'Pascal' <span class="cwhite"><</span> 'Python'
+							</td>
+						</tr>
+						<tr>
+							<td class="code">(1, 2, 3, 4)</td>
+							<td> < </td>
+							<td class="code">(1, 2, 4)</td>
+						</tr>
+						<tr>
+							<td class="code">(1, 2)</td>
+							<td> < </td>
+							<td class="code">(1, 2, -1)</td>
+						</tr>
+						<tr>
+							<td class="code">(1, 2, 3)</td>
+							<td> == </td>
+							<td class="code">(1.0, 2.0, 3.0)</td>
+						</tr>
+						<tr>
+							<td class="code">(1, 2, ('aa', 'ab'))</td>
+							<td> < </td>
+							<td class="code">(1, 2, ('abc', 'a'), 4)</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</section>
 			
 			
 			

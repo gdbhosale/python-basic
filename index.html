@@ -824,13 +824,368 @@ Hello   World
 				<h2>Input and Output of Data</h2>
 			</section>
 			
+			<section>
+				<h2>To take input from keyboard</h2>
+				<p>In String format</p>
+				<pre><code data-trim class="python">
+>>> a = raw_input() 	# raw string input
+12
+>>> a
+'12'
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>To take input from keyboard</h2>
+				<p>In Specific format</p>
+				<pre><code data-trim class="python">
+>>> num = input() 		# input of correct data type
+12
+>>> num
+12
+>>> num = input() 		# input of correct data type
+12d
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "&lt;string&gt;", line 1
+    12d
+      ^
+SyntaxError: unexpected EOF while parsing
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Print</h2>
+				<table>
+					<tr><th>Code</th><th>Output</th></tr>
+					<tbody>
+						<tr><td colspan="2" style="font-size:20px;text-align:center;">Normal print with newline</td></tr>
+						<tr>
+							<td>
+								<pre><code data-trim class="python" style="padding-right:10px;">
+print "Hello"
+print "World"
+								</code></pre>
+							</td>
+							<td>
+								<pre><code data-trim class="python" style="padding-right:20px;">
+Hello
+World
+								</code></pre>
+							</td>
+						</tr>
+						<tr><td colspan="2" style="font-size:20px;text-align:center;">Without newline</td></tr>
+						<tr>
+							<td>
+								<pre><code data-trim class="python" style="padding-right:25px;">
+print "Hello",
+print "World",
+								</code></pre>
+							</td>
+							<td>
+								<pre><code data-trim class="python" style="padding-right:25px;">
+Hello World
+								</code></pre>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</section>
+			
+			
+			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Help in python</h2>
+			</section>
+			
+			<section>
+				<h2>dir() Method</h2>
+				<ul class="left-align">
+					<li>Without arguments, dir() lists the variables, methods & modules you have loaded currently</li>
+				</ul>
+				<pre><code data-trim class="python" style="font-size:19px;">
+>>> a = 12
+>>> str = "Hello"
+>>> import sys
+>>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'a', 'str', 'sys']
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>dir() Method over Object</h2>
+				<ul class="left-align">
+					<li>Used to list down attributes & methods of Object</li>
+					<li>built-in function dir() is used to find out which names/methods a module defines. It returns a sorted list of strings</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> str = "Hello"
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Dunder methods</h2>
+				<ul class="left-align">
+					<li>dunder (double underscore) or "special/magic" Methods</li>
+					<li>Python way of operator overloading</li>
+					<li>Addition <span class="cgreen">+</span> == <span class="cred">__add__</span></li>
+					<li>Subtraction <span class="cgreen">-</span> == <span class="cred">__sub__</span></li>
+					<li>Division <span class="cgreen">/</span> == <span class="cred">__div__</span></li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>help() method</h2>
+				<pre><code data-trim class="python">
+>>> str = "Hello"
+>>> help(str.startswith)
+
+Help on built-in function startswith:
+
+startswith(...)
+    S.startswith(prefix[, start[, end]]) -> bool
+    
+    Return True if S starts with the specified prefix, False otherwise.
+    With optional start, test S beginning at that position.
+    With optional end, stop comparing S at that position.
+    prefix can also be a tuple of strings to try.
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Closing help / documentation</h2>
+				<ul class="left-align">
+					<li>Shows full screen documentation</li>
+					<li>Use page-up / page-down to scroll</li>
+					<li>Press <span class="cred">q</span> to quit</li>
+					<li>Press <span class="cred">h</span> for help</li>
+				</ul>
 			</section>
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Data Structures</h2>
 			</section>
+			
+			<section>
+				<h2>Sequences</h2>
+				<ul class="left-align">
+					<li>lists</li>
+					<li>dictionaries</li>
+					<li>tuples</li>
+					<li>sets</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>1. Lists</h2>
+				<ul class="left-align">
+					<li>Hold ordered sequence</li>
+					<li>Use <span class="cred">dir([])</span> to find out the attributes & methods of a list</li>
+					<li>Find method documentation by <span class="cred">help([].append)</span></li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> a = []
+>>> a.append(4)
+>>> a.append('hello')
+>>> a.append(1)
+>>> print a
+[4, 'hello', 1]
+>>> a.sort() 	# Alphabetical Array Sorting
+>>> print a
+[1, 4, 'hello']
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>List Methods</h2>
+				<table class="shrink noborder">
+					<thead>
+						<tr>
+							<th>Syntax</th>
+							<th>Operation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>l.<span class="cred">append</span>(x)</td>
+							<td>Insert x at end of list</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">insert</span>(i, x)</td>
+							<td>Insert an item at a given position/index</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">extend</span>(list2)</td>
+							<td>Add list2 items to list</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">sort</span>()</td>
+							<td>In place sort (Alphabetical)</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">sort</span>(cmp=None, key=None, reverse=False)</td>
+							<td>Sort the items of the list in place</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">reverse</span>()</td>
+							<td>Reverse list in place</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">remove</span>(item)</td>
+							<td>Remove first item value found</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">pop</span>()</td>
+							<td>Remove & return item at end of list</td>
+						</tr>
+						
+						<tr>
+							<td>l.<span class="cred">index</span>(x)</td>
+							<td>Return the index of first occurance of x value</td>
+						</tr>
+						<tr>
+							<td>l.<span class="cred">count</span>(x)</td>
+							<td>number of times x appears in the list</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</section>
+			
+			<section>
+				<h2>Using Lists as Stacks</h2>
+				<pre><code data-trim class="python">
+>>> stack = [3, 4, 5]
+>>> stack.append(6)
+>>> stack.append(7)
+>>> stack
+[3, 4, 5, 6, 7]
+>>> stack.pop()
+7
+>>> stack
+[3, 4, 5, 6]
+>>> stack.pop()
+6
+>>> stack.pop()
+5
+>>> stack
+[3, 4]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Nested Lists</h2>
+				<pre><code data-trim class="python">
+>>> matrix = [
+...     [1, 2, 3, 4],
+...     [5, 6, 7, 8],
+...     [9, 10, 11, 12]]
+>>> matrix
+[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>in keyword</h2>
+				<ul class="left-align">
+					<li>Checks if value present in sequence</li>
+					<li>Works on all data structures</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> a = [10, 20, 30]
+>>> 10 in a
+True
+>>> 25 in a
+False
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>2. Dictionaries</h2>
+				<ul class="left-align">
+					<li>Also called hashmap or associative array elsewhere</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> age = {}
+>>> age['george'] = 10
+>>> age['fred'] = 12
+>>> age['henry'] = 10
+>>> print age['george']
+10
+>>> age
+{'henry': 10, 'george': 10, 'fred': 12}
+>>>
+>>> 'henry' in age 	# in == __contains__ (dunder method)
+True
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>.get Method</h2>
+				<pre><code data-trim class="python">
+>>> print age['ford']
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 'ford'
+>>> print age.get('ford', '0')
+0
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Delete Dictionary Key</h2>
+				<pre><code data-trim class="python">
+>>> del age['fred'] 	# removing fred from age
+>>> age
+{'henry': 10, 'george': 10}
+>>> age.pop('henry')	# removing henry from age
+10
+>>> age
+{'george': 10}
+>>> 
+				</code></pre>
+				<p>Note: del() methods is not in dir(age). Its external method</p>
+			</section>
+			
+			<section>
+				<h2>3. Tuples</h2>
+				<p style="font-size:25px;">Unordered, Immutable, Nestable</p>
+				<pre><code data-trim class="python">
+>>> t = 12345, 54321, 'hello!'
+>>> t[0]
+12345
+>>> t
+(12345, 54321, 'hello!')
+>>> u = t, (1, 2, 3, 4, 5)      # Tuples may be nested
+>>> u
+((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+>>> t[0] = 88888 		# Tuples are immutable
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
+>>> v = ([1, 2, 3], [3, 2, 1]) 	# can contain mutable objects
+>>> v
+([1, 2, 3], [3, 2, 1])
+				</code></pre>
+			</section>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Iterations / Loops / Traversing</h2>

@@ -586,27 +586,27 @@ else:
 						<tr>
 							<td>></td>
 							<td>Greater than</td>
-						<tr>
+						</tr>
 						<tr>
 							<td>>=</td>
 							<td>Greater than or equal to</td>
-						<tr>
+						</tr>
 						<tr>
 							<td><</td>
 							<td>Less than</td>
-						<tr>
+						</tr>
 						<tr>
 							<td><=</td>
 							<td>Less than equal to</td>
-						<tr>
+						</tr>
 						<tr>
 							<td>==</td>
 							<td>Is equal to</td>
-						<tr>
+						</tr>
 						<tr>
 							<td>!=</td>
 							<td>Is not equal to</td>
-						<tr>
+						</tr>
 					</tbody>
 				</table>
 				
@@ -1174,10 +1174,153 @@ TypeError: 'tuple' object does not support item assignment
 				</code></pre>
 			</section>
 			
+			<section>
+				<h2>Tuples</h2>
+				<pre><code data-trim class="python">
+>>> empty = () 			# Empty tuple with length 0
+>>> singleton = 'hello', 	# Note trailing comma
+>>> len(singleton) 		# Length check
+1
+>>> singleton
+('hello',)
+>>> singleton = singleton + ('Aditya',) # append to tuple
+>>> singleton
+('hello', 'Aditya')
+>>> singleton = singleton + ('Mahesh') 	# append to tuple failed !
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: can only concatenate tuple (not "str") to tuple
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>4. Set</h2>
+				<ul class="left-align">
+					<li>Set is an <span class="cred">unordered</span> collection with <span class="cred">unique</span> elements</li>
+					<li>Supports mathematical operations like union, intersection, difference, and symmetric difference</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+>>> fruit = set(basket) 	# create a set without duplicates
+>>> fruit
+set(['orange', 'pear', 'apple', 'banana'])
+>>> 'orange' in fruit
+True
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Set Operations</h2>
+				<pre><code data-trim class="python">
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a 		# unique letters in a
+set(['a', 'r', 'b', 'c', 'd'])
+>>> a - b 		# letters in a but not in b. relative complement
+set(['r', 'b', 'd'])
+>>> a | b 		# letters in either a or b. union
+set(['a', 'c', 'b', 'd', 'm', 'l', 'r', 'z'])
+>>> a & b 		# letters in both a and b intersection
+set(['a', 'c'])
+>>> a ^ b 		# letters in a or b but not both (union- intersection)
+set(['b', 'd', 'm', 'l', 'r', 'z'])
+				</code></pre>
+			</section>
 			
 			
-			
-			
+			<section>
+				<h3>In Short</h3>
+				<table class="shrink" style="font-size:19px;margin:0px -50px;">
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th>Defination</th>
+							<th>Append</th>
+							<th>Access</th>
+							<th>Deletion</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>List</td>
+							<td class="code">
+								list = []<br>
+								list = [1, 2, 3]
+							</td>
+							<td class="code">
+								list.append(123)<br>
+								list.insert(0, 456)<br>
+								list.extend([789])
+							</td>
+							<td class="code">
+								list[0]
+							</td>
+							<td class="code">
+								list.pop()<br>
+								list.remove(789)<br>
+								del list[0]
+							</td>
+						</tr>
+						<tr>
+							<td>Dictionary</td>
+							<td class="code">
+								d = {}<br>
+								d = {'a':10,'b':20}
+							</td>
+							<td class="code">
+								d['elem'] = 123
+							</td>
+							<td class="code">
+								d['elem']<br>
+								d.get('elem',0)
+							</td>
+							<td class="code">
+								d.pop('elem')<br>
+								d.popitem()<br>
+								del d['elem']
+							</td>
+						</tr>
+						<tr>
+							<td>Tuple</td>
+							<td class="code">
+								t = ()<br>
+								t = (1, 2, 3)<br>
+								s = (1,)<br>
+								s = 'hello',
+							</td>
+							<td class="code">
+								t = t + (123,)
+							</td>
+							<td class="code">
+								t[0]
+							</td>
+							<td class="code">
+								Cannot be done
+							</td>
+						</tr>
+						<tr>
+							<td>Set</td>
+							<td class="code">
+								s = set(['a', 'b'])<br>
+								s = set('abcd')<br>
+							</td>
+							<td class="code">
+								s.add('elem')
+							</td>
+							<td class="code">
+								next(iter(s))<br>
+								s.pop()
+							</td>
+							<td class="code">
+								s.remove(x)<br>
+								s.discard(x)<br>
+								s.pop()<br>
+								s.clear()
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
 			
 			
 			

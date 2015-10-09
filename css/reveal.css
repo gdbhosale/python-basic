@@ -1186,8 +1186,10 @@ body {
  
  .reveal ul li{line-height:1.5em;}
  .reveal pre code{line-height:1.5em;}
+ .reveal table th{text-align:center !important;}
  .reveal table.shrink{font-size:0.6em;}
  .reveal table.noborder td{border:0px;padding-top:10px;}
+ .reveal table td.code{font-family:monospace;color:#efef8f;border-color:#FFF;line-height:28px;font-weight:200;}
  
  .fb_iframe_widget > span, .fb_iframe_widget > span > iframe{height:42px !important;width:350px !important;}
  

@@ -1462,6 +1462,281 @@ set(['b', 'd', 'm', 'l', 'r', 'z'])
 				<h2>Iterations / Loops / Traversing</h2>
 			</section>
 			
+			<section>
+				<h2>Simple Iteration</h2>
+				<table style="width:100%;">
+					<tr>
+						<td>
+							<pre><code data-trim class="python">
+arr = [1,2,3,4,5]
+for i in arr:
+    print i
+							</code></pre>
+							<center>is same as</center>
+							<pre><code data-trim class="python">
+for i in [1,2,3,4,5]:
+    print i
+							</code></pre>
+							<center>is same as</center>
+							<pre><code data-trim class="python">
+for i in range(1, 6):
+    print i
+							</code></pre>
+						</td>
+						<td>
+							Output:<br>
+							<pre><code data-trim class="python">
+1
+2
+3
+4
+5
+							</code></pre>
+						</td>
+					</tr>
+				</table>
+			</section>
+			
+			<section>
+				<h2>Iteration without index</h2>
+				<pre><code data-trim class="python">
+>>> arr = ["str1", "str2", "str3"]
+>>> for i in arr:
+...     print i
+... 
+str1
+str2
+str3
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Iteration with index</h2>
+				<pre><code data-trim class="python">
+>>> arr = ["str1", "str2", "str3"]
+>>> for i in range(len(arr)):
+...     print i, arr[i]
+... 
+0 str1
+1 str2
+2 str3
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Iteration using enumerate</h2>
+				<pre><code data-trim class="python">
+>>> for index, value in enumerate(arr):
+...     print index, value
+... 
+0 str1
+1 str2
+2 str3
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Using Zip Method</h2>
+				<pre><code data-trim class="python">
+>>> arr1 = ['a', 'b', 'c']
+>>> arr2 = [20, 45, 78]
+>>> for i, v in zip(arr1, arr2):
+...     print "Value of {0} is {1}.".format(i, v)
+... 
+Value of a is 20.
+Value of b is 45.
+Value of c is 78.
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Reverse Iteration</h2>
+				<pre><code data-trim class="python">
+>>> for i in reversed(range(1,10,2)):
+...     print i
+... 
+9
+7
+5
+3
+1
+>>>
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Iteration of sorted set</h2>
+				<pre><code data-trim class="python">
+>>> basket = ['apple', 'orange', 'apple', 'pear']
+>>> for f in sorted(set(basket)):
+...     print f
+... 
+apple
+orange
+pear
+>>> 
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Iterating dictionary 1</h2>
+				<pre><code data-trim class="python">
+>>> knights = {'gallahad':'the pure','robin':'the brave'}
+>>> for k, v in knights.iteritems():
+...     print k, v
+... 
+gallahad the pure
+robin the brave
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Iterating dictionary 2</h2>
+				<pre><code data-trim class="python">
+d1 = { "john": 66, "mike": 81, "rock": 77}
+print "-----Key list-----"
+for key in d1.keys():
+	print key
+
+print "-----Value list-----"
+for value in d1.values():
+	print value
+
+print "-----Key Value pairs-----"
+for key, value in d1.items():
+	print "[",key," : ",value,"]"
+
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>A Fibonacci Series</h2>
+				Using while
+				<pre><code data-trim class="python">
+>>> a, b = 0, 1
+>>> while b < 10:
+...     print b,
+...     a,b=b,a+b
+... 
+1 1 2 3 5 8
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>continue</h2>
+				<pre><code data-trim class="python">
+list1 = [12, 50, 34, 78, 33, 99]
+for item in list1:
+	if item < 50:
+		continue
+	print item
+				</code></pre>
+				Output:
+				<pre><code data-trim class="python">
+50
+78
+99
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>break</h2>
+				<pre><code data-trim class="python">
+list1 = [12, 34, 78, 99]
+for item in list1:
+	print item
+	if item > 70:
+		break
+				</code></pre>
+				Output:
+				<pre><code data-trim class="python">
+12
+34
+78
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Finding Even & Odd numbers</h2>
+				Using continue
+				<pre><code data-trim class="python">
+for num in range(2, 10):
+	if num % 2 == 0:
+		print num, "Even"
+		continue
+	print num, "Odd"
+				</code></pre>
+				Output:
+				<pre><code data-trim class="python">
+2 Even
+3 Odd
+4 Even
+5 Odd
+6 Even
+7 Odd
+8 Even
+9 Odd
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Finding Prime numbers</h2>
+				<p style="font-size:20px;">A prime or prime number is a natural number that has exactly two distinct natural number divisors: 1 and itself</p>
+				<pre><code data-trim class="python">
+for n in range(2, 10): 		# total range of numbers
+	for x in range(2, n): 	# get numbers less than n
+		if n % x == 0: 	# check modulo
+			print n, '=', x, '*', n/x
+			break
+	else:
+		# loop fell without finding factor
+		print n, 'Prime number'
+				</code></pre>
+				<p style="font-size:18px;">Output:</p>
+				
+				<pre><code data-trim class="python" style="font-size:18px;">
+2 Prime number
+3 Prime number
+4 = 2 * 2
+5 Prime number
+6 = 2 * 3
+7 Prime number
+8 = 2 * 4
+9 = 3 * 3
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>pass keyword</h2>
+				<ul class="left-align">
+					<li>Pass is null operation</li>
+					<li>Used as placeholder for syntactical needs</li>
+				</ul>
+				<pre><code data-trim class="python">
+for i in range(10):
+	pass
+
+def fun(arg):
+	pass
+
+class c:
+	pass
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>A suggestion</h2>
+				<ul class="left-align">
+					<li>Do not modify list or dictionary contents while looping them.</li>
+			</section>
+			
+			
+			
+			
 			
 			
 			

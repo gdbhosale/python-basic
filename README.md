@@ -12,3 +12,8 @@ Repository for Best Python Tutorial covering following chapters:
 - Miscellanious & Examples
 
 Online preview on http://dwij.in/python/basics
+
+
+Please star the project for latest updates.
+
+All the best !!!

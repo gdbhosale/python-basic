@@ -130,6 +130,7 @@ body {
   z-index: 1; }
   
 .fb-page iframe{width:376px !important;height: 244px !important;}
+.fb-like.fb_iframe_widget iframe{width:170px !important;height:26px !important;}
 
 /** Prevents layering issues in certain browser/transition combinations */
 .reveal a {

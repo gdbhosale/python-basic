@@ -1813,7 +1813,26 @@ class c:
 					<li>Do not modify list or dictionary contents while looping them.</li>
 			</section>
 			
+			<section>
+				<h2>Practice Problem</h2>
+				<h5>Program to Display the multiplication Table</h5>
+				<ul class="left-align">
+					<li>Ask which multiplication table of : </li>
+					<li>Print Multiplication table.</li>
+				</ul>
+			</section>
 			
+			<section>
+				<h2>Solution to Problem</h2>
+				<pre><code data-trim class="python">
+# take input from user
+num = int(input("Display multiplication table of : "))
+
+# iterate 10 times
+for i in range(1,11):
+   print num, 'x' , i, '=', num * i
+				</code></pre>
+			</section>
 			
 			
 			
@@ -1862,12 +1881,108 @@ print b
 				<h2>Default parameter values</h2>
 				<ul class="left-align">
 					<li>In case if we dont have any value to pass</li>
+					<li>Also called Named parameter</li>
 				</ul>
 				<pre><code data-trim class="python">
 def add_n(num, n = 3):
 	￼return num + n
 five = add_n(2)
 ten  = add_n(15, -5)
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Default parameters can be mutable</h2>
+				<ul class="left-align">
+					<li>When the default parameter is a mutable object such as list, dictionary, or instances of most classes</li>
+				</ul>
+				<pre><code data-trim class="python">
+def f(a, L=[]):
+	L.append(a)
+	return L
+print f(1)
+print f(2)
+print f(3)
+------------------------
+[1]
+[1, 2]
+[1, 2, 3]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>To change to default behavior</h2>
+				<ul class="left-align">
+					<li>If you don’t want the default to be shared between subsequent calls</li>
+				</ul>
+				<pre><code data-trim class="python">
+def f(a, L=None):
+	if L is None:
+		L = []
+	L.append(a)
+	return L
+print f(1)
+print f(2)
+print f(3)
+------------------------
+[1]
+[2]
+[3]
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>__doc__</h2>
+				<ul class="left-align">
+					<li>Functions have docstrings. Accessible via .__doc__ or help</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> def echo(txt):
+...     "echo back txt" # Function/Method Documentation
+...     return txt
+... 
+>>> help(echo)
+
+Help on function echo in module __main__:
+
+echo(txt)
+    echo back txt
+
+(END)
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Method Naming</h2>
+				<ul class="left-align">
+					<li>lowercase</li>
+					<li>underscore_between_words</li>
+					<li>don't start with numbers</li>
+					<li>verb</li>
+					<li>See PEP 8 for more info</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Function Properties</h2>
+				<ul class="left-align">
+					<li>Function refers to another function variable</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> def addition(a, b=0):
+...     "This method adds two numbers"
+...     return a+b
+... 
+>>> addition(10,20)
+30
+>>> addition(10)
+10
+>>> addition
+&lt;function addition at 0x10aa55c80&gt;
+>>> add = addition # Function refers to another function variable
+>>> add(10, 30)
+40
+>>> 
 				</code></pre>
 			</section>
 			
@@ -1885,10 +2000,58 @@ def setup():
 				</code></pre>
 			</section>
 			
-<!--			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>File I/O</h2>
 			</section>
+			
+			<section>
+				<h2>File Reading</h2>
+				<ul class="left-align">
+					<li>Open a file to read from it.</li>
+				</ul>
+				<pre><code data-trim class="python">
+fin = open("sample.txt")
+for line in fin:
+    print line
+fin.close()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>File Writing</h2>
+				<ul class="left-align">
+					<li>Open a file using 'w' to write to a file:</li>
+				</ul>
+				<pre><code data-trim class="python">
+fout = open("sample2.txt", "w")
+fout.write("hello world")
+fout.flush()
+fout.close()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>A suggestion</h2>
+				<ul class="left-align">
+					<li>Don’t forget to close file after use.</li>
+			</section>
+			
+			<section>
+				<h2>Closing files using with</h2>
+				<ul class="left-align">
+					<li>Also called as implicit close (Only ver. 2.5+)</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> with open('sample2.txt') as fin:
+...     for line in fin:
+...             print line
+... 
+hello world
+>>>
+				</code></pre>
+			</section>
+<!--			
+			
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Classes / OOPS</h2>

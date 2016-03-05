@@ -2050,12 +2050,72 @@ hello world
 >>>
 				</code></pre>
 			</section>
-<!--			
-			
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Classes / OOPS</h2>
 			</section>
+			
+			<section>
+				<h2>Classes</h2>
+				<pre><code data-trim class="python">
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+    def study(self):
+        print self.name,"studying..."
+
+stud = Student("Mark Watson")
+stud.study()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Classes</h2>
+				<ul class="left-align">
+					<li><a class="cred">object</a> (as base class)</li>
+					<li>dunder <a class="cred">__init__</a> (constructor)</li>
+					<li>all methods take <a class="cred">self</a> as first parameter</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>self</h2>
+				<ul class="left-align">
+					<li>Always represent current object</li>
+				</ul>
+			</section>
+			
+			<section>
+				<h2>Subclass</h2>
+				<pre><code data-trim class="python">
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+    def study(self):
+        print self.name,"studying..."
+
+class Geek(Student):
+    "classes can have documentation"
+    def study(self):
+        print "%s Programming..." % self.name
+
+g = Geek("Mark Watson")
+g.study()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Class Naming</h2>
+				<ul class="left-align">
+					<li>Cannot start with numbers</li>
+					<li>Nouns</li>
+					<li><a class="cred">CamelCase</a> – first the letter in a word within name should be written in capitals</li>
+				</ul>
+			</section>
+<!--			
+			
+			
+			
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Modules / Libraries</h2>

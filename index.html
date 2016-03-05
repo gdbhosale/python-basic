@@ -978,6 +978,75 @@ startswith(...)
 			</section>
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
+				<h2>Practice Sessions Basics</h2>
+			</section>
+			
+			<section>
+				<h2>Practice Problem 1</h2>
+				<ul class="left-align">
+					<li>Take two numbers from command prompt.</li>
+					<li>Do addition.</li>
+					<li>Show result like below:</li>
+				</ul>
+				<pre><code data-trim>
+The sum of 120 and 30 is 150
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Solution to Problem 1</h2>
+				<pre><code data-trim class="python">
+# This program adds two numbers provided by user
+
+# Store input numbers
+num1 = input('Enter number 1: ')
+num2 = input('Enter number 2: ')
+
+# Add two numbers
+sum = int(num1) + int(num2)
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Practice Problem 2</h2>
+				<h5>Calculate area of a triangle</h5>
+				<ul class="left-align">
+					<li>Take length of three sides from user</li>
+					<li>calculate the area</li>
+					<li>Show result like below:</li>
+				</ul>
+				<pre><code data-trim>
+The area of your triangle is 20.90
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>Solution to Problem 2</h2>
+				<img src="images/problem-triangle-area.jpg" alt="Area of triangle in Python">
+			</section>
+			
+			<section>
+				<h2>Solution to Problem 2</h2>
+				<pre><code data-trim class="python">
+# Program to find area of triangle
+
+a = float(input('First side: '))
+b = float(input('Second side: '))
+c = float(input('Third side: '))
+
+# calculate the semi-perimeter
+peri = (a + b + c) / 2
+
+# calculate the area
+area = (peri * (peri-a) * (peri-b) * (peri-c)) ** 0.5
+print('The area of the triangle is %0.2f' %area)
+				</code></pre>
+			</section>
+			
+			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Data Structures</h2>
 			</section>
 			
@@ -1816,6 +1885,7 @@ def setup():
 				</code></pre>
 			</section>
 			
+<!--			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>File I/O</h2>
 			</section>
@@ -1827,7 +1897,7 @@ def setup():
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Modules / Libraries</h2>
 			</section>
-			
+			-->
 			
 			<section>
 				<h2>References</h2>

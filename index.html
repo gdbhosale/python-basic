@@ -1767,12 +1767,14 @@ for num in range(2, 10):
 				<p style="font-size:20px;">A prime or prime number is a natural number that has exactly two distinct natural number divisors: 1 and itself</p>
 				<pre><code data-trim class="python">
 for n in range(2, 10): 		# total range of numbers
+	isDiv = False
 	for x in range(2, n): 	# get numbers less than n
 		if n % x == 0: 	# check modulo
 			print n, '=', x, '*', n/x
+			isDiv = True
 			break
-	else:
-		# loop fell without finding factor
+	# Check whether isDiv is True or False
+	if not isDiv:
 		print n, 'Prime number'
 				</code></pre>
 				<p style="font-size:18px;">Output:</p>
@@ -2001,57 +2003,6 @@ def setup():
 			</section>
 			
 			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
-				<h2>File I/O</h2>
-			</section>
-			
-			<section>
-				<h2>File Reading</h2>
-				<ul class="left-align">
-					<li>Open a file to read from it.</li>
-				</ul>
-				<pre><code data-trim class="python">
-fin = open("sample.txt")
-for line in fin:
-    print line
-fin.close()
-				</code></pre>
-			</section>
-			
-			<section>
-				<h2>File Writing</h2>
-				<ul class="left-align">
-					<li>Open a file using 'w' to write to a file:</li>
-				</ul>
-				<pre><code data-trim class="python">
-fout = open("sample2.txt", "w")
-fout.write("hello world")
-fout.flush()
-fout.close()
-				</code></pre>
-			</section>
-			
-			<section>
-				<h2>A suggestion</h2>
-				<ul class="left-align">
-					<li>Don’t forget to close file after use.</li>
-			</section>
-			
-			<section>
-				<h2>Closing files using with</h2>
-				<ul class="left-align">
-					<li>Also called as implicit close (Only ver. 2.5+)</li>
-				</ul>
-				<pre><code data-trim class="python">
->>> with open('sample2.txt') as fin:
-...     for line in fin:
-...             print line
-... 
-hello world
->>>
-				</code></pre>
-			</section>
-			
-			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
 				<h2>Classes / OOPS</h2>
 			</section>
 			
@@ -2209,6 +2160,57 @@ from time import sleep
 while True:
 	print "Hi"
 	sleep(1)
+				</code></pre>
+			</section>
+			
+			<section data-background="#F56767" data-background-transition="zoom" data-transition="zoom">
+				<h2>File I/O</h2>
+			</section>
+			
+			<section>
+				<h2>File Reading</h2>
+				<ul class="left-align">
+					<li>Open a file to read from it.</li>
+				</ul>
+				<pre><code data-trim class="python">
+fin = open("sample.txt")
+for line in fin:
+    print line
+fin.close()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>File Writing</h2>
+				<ul class="left-align">
+					<li>Open a file using 'w' to write to a file:</li>
+				</ul>
+				<pre><code data-trim class="python">
+fout = open("sample2.txt", "w")
+fout.write("hello world")
+fout.flush()
+fout.close()
+				</code></pre>
+			</section>
+			
+			<section>
+				<h2>A suggestion</h2>
+				<ul class="left-align">
+					<li>Don’t forget to close file after use.</li>
+			</section>
+			
+			<section>
+				<h2>Closing files using with</h2>
+				<ul class="left-align">
+					<li>Also called as implicit close (Only ver. 2.5+)</li>
+				</ul>
+				<pre><code data-trim class="python">
+>>> with open('sample2.txt') as fin:
+...     for line in fin:
+...             print line
+... 
+hello world
+>>>
 				</code></pre>
 			</section>
 			

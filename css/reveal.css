@@ -1188,6 +1188,7 @@ body {
  .cwhite{color:#FFF !important;}
  
  .left-align{text-align:left;}
+ .fullw{width:100%;}
  
  .reveal ul li{line-height:1.5em;}
  .reveal pre code{line-height:1.5em;}

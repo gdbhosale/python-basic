@@ -247,12 +247,14 @@ body {
  *********************************************/
 .reveal .slide-number {
   position: fixed;
+  color: #eee !important;
   display: block;
-  right: 15px;
+  left: 15px;
+  letter-spacing: 2px;
   bottom: 15px;
   opacity: 0.5;
   z-index: 31;
-  font-size: 12px; }
+  font-size: 14px; }
 
 /*********************************************
  * SLIDES
@@ -1200,10 +1202,10 @@ body {
  
  /*.fb_iframe_widget > span, .fb_iframe_widget > span > iframe{height:42px !important;width:350px !important;}*/
  
- .share-reveal{position:absolute;bottom:16px;left:50%;margin-left:-139px;z-index:20;}
-.share-reveal a {display: inline-block;height: 34px;line-height: 34px;padding: 0 10px;color: #fff;font-family: Helvetica;text-decoration: none;font-size: 12px;vertical-align: top;box-sizing: border-box;}
+.share-reveal{position:absolute;bottom:16px;left:50%;margin-left:-139px;z-index:20;}
+.share-reveal a {display: inline-block;height: 34px;line-height: 34px;padding: 0 10px;color: #666;font-family: Helvetica;text-decoration: none;font-size: 12px;vertical-align: top;box-sizing: border-box;}
 .share-reveal svg {vertical-align:middle;}
 .share-reveal a + a {margin-left:10px;}
-.share-reveal-editor{border:1px solid #fff;}
+.share-reveal-editor{border:1px solid #666;}
 .share-reveal-twitter,.share-reveal-follow{background-color:#00aced;}
-.share-reveal-facebook{background-color:#4B71B8;}
+.share-reveal-facebook{border:1px solid #666;}

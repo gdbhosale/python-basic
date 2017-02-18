@@ -2213,6 +2213,36 @@ hello world
 >>>
 				</code></pre>
 			</section>
+
+            <section>
+				<h2>Saving Data in File (JSON)</h2>
+				<pre><code data-trim class="python">>>> list = []
+>>> list.append({"name":"Ramesh", "age": 21, "class": "BE"})
+>>> list.append({"name":"Punit", "age": 20, "class": "TE"})
+>>> 
+>>> import json
+>>> jsonData = json.dumps(list)
+>>> fout = open("studs.txt", "w")
+>>> fout.write(jsonData)
+>>> fout.flush()
+>>> fout.close()
+				</code></pre>
+			</section>
+
+            <section>
+				<h2>Get Saved Data from File (JSON)</h2>
+				<pre><code data-trim class="python">>>> fin = open("studs.txt")
+>>> line  = fin.readline()
+>>> 
+>>> import json
+>>> list = json.loads(line)
+>>> for stud in list:
+...     print stud
+... 
+{u'age': 21, u'name': u'Ramesh', u'class': u'BE'}
+{u'age': 20, u'name': u'Punit', u'class': u'TE'}
+				</code></pre>
+			</section>
 			
 			<section>
 				<h2>Practice Problem</h2>
